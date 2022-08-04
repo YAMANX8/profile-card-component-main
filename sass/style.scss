@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@import "_colors";
 * {
     box-sizing: border-box;
     font-family: "Kumbh Sans", sans-serif;
@@ -6,28 +7,35 @@
     padding: 0;
     outline: 0;
 }
-$primary: hsl(185, 75%, 39%);
-$txt-3: hsl(229, 23%, 23%);
-$txt-2: hsl(227, 10%, 46%);
-$txt-1: hsl(0, 0%, 59%);
-body {
+html {
     font-size: 18px;
 }
 .profile-card {
-    background: url(../images/bg-pattern-bottom.svg) no-repeat 170% -110%,
-        url(../images/bg-pattern-top.svg) no-repeat -80% 180%, $primary;
+    background: $bg;
     height: 100vh;
     display: grid;
     place-content: center;
+    overflow: hidden;
+}
+.card,
+.brief,
+.wrapper {
+    position: relative;
+}
+.wrapper,
+.Statistic {
+    display: flex;
 }
 .wrapper {
-    background: white;
-    width: 300px;
-    height: 350px;
+    background: #fff;
+    width: 325px;
+    min-height: 350px;
     border-radius: 10px;
-    display: flex;
     flex-direction: column;
     overflow: hidden;
+    div:first-child {
+        position: relative;
+    }
 }
 .upper {
     background: url(../images/bg-pattern-card.svg);
@@ -35,18 +43,76 @@ body {
 }
 .pro-pic {
     position: absolute;
-    /* display: grid; */
-    /* place-content: center; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
-    border-radius: 50%;
+    img {
+        display: block;
+        border-radius: 50%;
+        border: solid 5px #fff;
+    }
 }
 .brief {
     height: 150px;
+    border-bottom: solid 1px $clr-1;
+    p {
+        text-align: center;
+        top: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .age {
+        font-weight: 400;
+        color: $clr-2;
+    }
 }
 .Statistic {
-    display: flex;
     text-align: center;
+    padding: 1.2rem;
+    div {
+        flex: 1;
+    }
+    p {
+        font-size: 0.5rem;
+        letter-spacing: 0.1rem;
+        color: $clr-1;
+    }
+}
+.city {
+    font-size: 0.8rem;
+    color: $clr-2;
+}
+.important-text {
+    display: block;
+    font-weight: 700;
+    font-size: 1rem !important;
+    letter-spacing: normal !important;
+    color: $clr-3 !important;
+}
+.bubble {
+    &-top,
+    &-bottom {
+        position: absolute;
+        width: 978px;
+        height: 978px;
+    }
+    &-top {
+        background: url(../images/bg-pattern-top.svg);
+        bottom: 23%;
+        right: 50%;
+    }
+    &-bottom {
+        background: url(../images/bg-pattern-bottom.svg);
+        top:35%;
+        left:35%;
+        transition: 1s;
+    }
+}
+@media screen and (min-width:500px){
+    .bubble-bottom{
+        top: 45%;
+        left: 50%;
+    }
 }

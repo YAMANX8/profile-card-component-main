@@ -4,13 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Frontend Mentor | Profile card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
       color: #fff;
@@ -19,7 +17,6 @@
       position: absolute;
       bottom: 0;
     }
-
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
@@ -28,24 +25,28 @@
 
 <body>
   <section class="profile-card">
-    <div class="wrapper">
-      <div>
-        <div class="upper"></div>
-        <div class="pro-pic"><img src="assets/images/image-victor.jpg" alt="profile-picture"></div>
-        <div class="brief">
-          <p><span class="important-text">Victor Crest</span> 26 <br />London</p>
+    <div class="card">
+      <div class="bubble-top"></div>
+      <div class="bubble-bottom"></div>
+      <div class="wrapper">
+        <div class="upper-container">
+          <div class="upper"></div>
+          <div class="brief">
+            <p><span class="important-text">Victor Crest <span class="age">26</span></span> <span
+                class="city">London</span></p>
+          </div>
+          <div class="pro-pic"><img src="assets/images/image-victor.jpg" alt="profile-picture"></div>
         </div>
-      </div>
-      <div class="Statistic">
-        <div>
-          <p><span class="important-text">80K</span> Followers</p>
-        </div>
-        <div>
-          <p><span class="important-text">803K</span> Likes</p>
-        </div>
-
-        <div>
-          <p><span class="important-text">1.4K</span> Photos </p>
+        <div class="Statistic">
+          <div>
+            <p><span class="important-text">80K</span> Followers</p>
+          </div>
+          <div>
+            <p><span class="important-text">803K</span> Likes</p>
+          </div>
+          <div>
+            <p><span class="important-text">1.4K</span> Photos </p>
+          </div>
         </div>
       </div>
     </div>

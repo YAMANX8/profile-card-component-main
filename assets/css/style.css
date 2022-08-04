@@ -8,31 +8,46 @@
   outline: 0;
 }
 
-body {
+html {
   font-size: 18px;
 }
 
 .profile-card {
-  background: url(../images/bg-pattern-bottom.svg) no-repeat 170% -110%, url(../images/bg-pattern-top.svg) no-repeat -80% 180%, #19a2ae;
+  background: #19a2ae;
   height: 100vh;
   display: -ms-grid;
   display: grid;
   place-content: center;
+  overflow: hidden;
 }
 
+.card,
+.brief,
 .wrapper {
-  background: white;
-  width: 300px;
-  height: 350px;
-  border-radius: 10px;
+  position: relative;
+}
+
+.wrapper,
+.Statistic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.wrapper {
+  background: #fff;
+  width: 325px;
+  min-height: 350px;
+  border-radius: 10px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
+}
+
+.wrapper div:first-child {
+  position: relative;
 }
 
 .upper {
@@ -42,24 +57,92 @@ body {
 
 .pro-pic {
   position: absolute;
-  /* display: grid; */
-  /* place-content: center; */
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   overflow: hidden;
+}
+
+.pro-pic img {
+  display: block;
   border-radius: 50%;
+  border: solid 5px #fff;
 }
 
 .brief {
   height: 150px;
+  border-bottom: solid 1px #969696;
+}
+
+.brief p {
+  text-align: center;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.brief .age {
+  font-weight: 400;
+  color: #6a6f81;
 }
 
 .Statistic {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   text-align: center;
+  padding: 1.2rem;
+}
+
+.Statistic div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.Statistic p {
+  font-size: 0.5rem;
+  letter-spacing: 0.1rem;
+  color: #969696;
+}
+
+.city {
+  font-size: 0.8rem;
+  color: #6a6f81;
+}
+
+.important-text {
+  display: block;
+  font-weight: 700;
+  font-size: 1rem !important;
+  letter-spacing: normal !important;
+  color: #2d3248 !important;
+}
+
+.bubble-top, .bubble-bottom {
+  position: absolute;
+  width: 978px;
+  height: 978px;
+}
+
+.bubble-top {
+  background: url(../images/bg-pattern-top.svg);
+  bottom: 23%;
+  right: 50%;
+}
+
+.bubble-bottom {
+  background: url(../images/bg-pattern-bottom.svg);
+  top: 35%;
+  left: 35%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media screen and (min-width: 500px) {
+  .bubble-bottom {
+    top: 45%;
+    left: 50%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

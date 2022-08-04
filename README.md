@@ -50,7 +50,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 - I need to be focused on how to structure the text in html, like how to deside to use 'span' element or do I need to 'p' element
 - I need to be focused on how name classes
-- I need to be focused on where to put the bubble images, like put them inside the card and position them depending on it or put it in the background and position them depending on it. and the issue of using them in the 'background' property or use 'img' tag in html 
+- I need to be focused on where to put the bubble images, like put them inside the card and position them depending on it or put them in the background and position them depending on it. and the issue of using them in the 'background' property or use 'img' tag in html 
 
 ## Acknowledgments
 

@@ -17,6 +17,7 @@
       position: absolute;
       bottom: 0;
     }
+
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
@@ -25,19 +26,25 @@
 
 <body>
   <section class="profile-card">
-    <div class="card">
+    <div class="card" role="profile card">
+
       <div class="bubble-top"></div>
       <div class="bubble-bottom"></div>
+
       <div class="wrapper">
-        <div class="upper-container">
+
+        <div>
           <div class="upper"></div>
-          <div class="brief">
-            <p><span class="important-text">Victor Crest <span class="age">26</span></span> <span
-                class="city">London</span></p>
+          <div class="brief" role="brief">
+            <h2>
+              <span class="important-text">Victor Crest <span class="age">26</span></span>
+              <span class="city">London</span>
+            </h2>
           </div>
           <div class="pro-pic"><img src="assets/images/image-victor.jpg" alt="profile-picture"></div>
         </div>
-        <div class="Statistic">
+
+        <div class="Statistic" role="statistic">
           <div>
             <p><span class="important-text">80K</span> Followers</p>
           </div>
@@ -48,10 +55,11 @@
             <p><span class="important-text">1.4K</span> Photos </p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
-  <div class="attribution">
+  <div class="attribution" role="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Yaman Al-Jazzar</a>.
   </div>
